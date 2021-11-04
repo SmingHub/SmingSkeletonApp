@@ -1,0 +1,3 @@
+mainmenu "SkeletonApp Configuration Menu"
+# If you are not familiar with Kconfig then read the language definition: 
+#    https://www.kernel.org/doc/html/latest/kbuild/kconfig-language.html
