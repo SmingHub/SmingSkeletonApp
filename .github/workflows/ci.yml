@@ -1,0 +1,41 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Sming Framework
+      run: |
+         cd /tmp
+         git clone https://github.com/SmingHub/Sming.git
+         cd Sming/Sming
+         export SMING_HOME=$(pwd)
+         ../Tools/install.sh all
+    - name: Check Coding Style
+      env: 
+        SMING_HOME: /tmp/Sming/Sming
+        SMING_ARCH: Host
+      run: |
+        make cs
+        DIFFS=$(git diff)
+        if [ -n "$DIFFS" ]; then
+          echo "!!! Coding Style issues Found!!!"
+          echo "    Run: 'make cs' to fix them. "
+          echo "$DIFFS"
+          exit 1
+        fi
+    - name: Compile Application
+      env: 
+        SMING_HOME: /tmp/Sming/Sming
+      run: |
+        source $SMING_HOME/../Tools/export.sh
+        make
