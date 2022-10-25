@@ -18,7 +18,7 @@ This repository offers supports for:
 
 -  `Gitpod <https://gitpod.io/>`__
 
-   -  [|Open in Gitpod|](`https://gitpod.io/#https://github.com/SmingHub/SmingSkeletonApp/tree/feature/devcontainers <https://gitpod.io/#https://github.com/SmingHub/SmingSkeletonApp/tree/feature/devcontainers>`__
+   -  |OpenInGitpod|_
 
 -  `VS Code Dev
    Containers <https://code.visualstudio.com/docs/remote/containers#_quick-start-open-an-existing-folder-in-a-container>`__
@@ -45,7 +45,8 @@ customization of the Dev Container can be achived, see
 `.devcontainer.json
 reference <https://code.visualstudio.com/docs/remote/devcontainerjson-reference>`__.
 
-.. |Open in Gitpod| image:: https://gitpod.io/button/open-in-gitpod.svg
+.. |OpenInGitpod| image:: https://gitpod.io/button/open-in-gitpod.svg
+.. _OpenInGitpod: https://gitpod.io/#https://github.com/SmingHub/SmingSkeletonApp/tree/feature/devcontainers
 
 Local Development
 ~~~~~~~~~~~~~~~~~
