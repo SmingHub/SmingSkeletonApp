@@ -1,14 +1,12 @@
 {
   "name": "Sming Skeleton Application",
-  "image": "docker.io/attachix/sming:develop",
-  /*
+  // "image": "docker.io/attachix/sming:develop",
   "build": {
     "dockerfile": "Dockerfile",
     "args": {
       "SMING_BRANCH":"develop",
     }
   },
-  */
   "settings": {
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
