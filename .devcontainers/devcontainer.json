@@ -1,6 +1,6 @@
 {
   "name": "Sming Skeleton Application",
-  "image": "attachix/sming:develop",
+  "image": "docker.io/attachix/sming:develop",
   /*
   "build": {
     "dockerfile": "Dockerfile",
@@ -13,16 +13,13 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "modifications",
-    "editor.formatOnType": true,
-    "lldb.executable": "/usr/bin/lldb",
-    "files.watcherExclude": {
-      "**/target/**": true
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "files.associations": {
+        "*.hw": "jsonc",
+        "*.fwfs": "jsonc",
+        "optional": "cpp"
     },
-    "rust-analyzer.checkOnSave.command": "clippy",
-    "rust-analyzer.checkOnSave.allTargets": false,
-    "[rust]": {
-      "editor.defaultFormatter": "rust-lang.rust-analyzer"
-    }
+    "json.schemas": []
   },
   "extensions": [
     "rust-lang.rust-analyzer",
