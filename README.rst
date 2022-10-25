@@ -9,6 +9,47 @@ This application is meant to be used as a starting place for those looking to ge
 Getting Started
 ---------------
 
+Cloud Development
+~~~~~~~~~~~~~~~~~~
+You can start creating and compiling Sming applications directly from
+your browser.
+
+This repository offers supports for:
+
+-  `Gitpod <https://gitpod.io/>`__
+
+   -  [|Open in Gitpod|](`https://gitpod.io/#https://github.com/SmingHub/SmingSkeletonApp/tree/feature/devcontainers <https://gitpod.io/#https://github.com/SmingHub/SmingSkeletonApp/tree/feature/devcontainers>`__
+
+-  `VS Code Dev
+   Containers <https://code.visualstudio.com/docs/remote/containers#_quick-start-open-an-existing-folder-in-a-container>`__
+-  `GitHub
+   Codespaces <https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace>`__
+
+..
+
+   **Note**
+
+   In order to use Gitpod the project needs to be published in a GitLab,
+   GitHub, or Bitbucket repository.
+
+   In `order to use GitHub
+   Codespaces <https://github.com/features/codespaces#faq>`__ the
+   project needs to be published in a GitHub repository and the user
+   needs to be part of the Codespaces beta or have the project under an
+   organization.
+
+If using VS Code or GitHub Codespaces, you can pull the image instead of
+building it from the Dockerfile by selecting the ``image`` property
+instead of ``build`` in ``.devcontainer/devcontainer.json``. Further
+customization of the Dev Container can be achived, see
+`.devcontainer.json
+reference <https://code.visualstudio.com/docs/remote/devcontainerjson-reference>`__.
+
+.. |Open in Gitpod| image:: https://gitpod.io/button/open-in-gitpod.svg
+
+Local Development
+~~~~~~~~~~~~~~~~~
+
 The first step is to install Sming on your computer.
 If you haven't done this already take a look at the `Sming documentation <https://sming.readthedocs.io/en/latest/getting-started/index.html>`_.
 
