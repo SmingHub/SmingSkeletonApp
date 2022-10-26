@@ -16,10 +16,7 @@ your browser.
 
 This repository offers supports for:
 
--  `Gitpod <https://gitpod.io/>`__
-
-   -  |OpenInGitpod|_
-
+-  `Gitpod <https://gitpod.io/>`__: |OpenInGitpod|_
 -  `VS Code Dev
    Containers <https://code.visualstudio.com/docs/remote/containers#_quick-start-open-an-existing-folder-in-a-container>`__
 -  `GitHub

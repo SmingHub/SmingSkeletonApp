@@ -1,0 +1,10 @@
+image: attachix/sming:develop
+tasks:
+ - name: Setup environment variables for Sming 
+   command: |
+     source /opt/sming/Tools/export.sh
+vscode:
+  extensions:
+    - espressif.esp-idf-extension
+    - anwar.resourcemonitor
+    - yzhang.markdown-all-in-one
