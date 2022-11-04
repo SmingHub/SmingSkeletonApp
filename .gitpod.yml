@@ -1,4 +1,6 @@
-image: attachix/sming:develop
+image: 
+  file: .devcontainer/Dockerfile
+  context: .devcontainer
 tasks:
  - name: Setup environment variables for Sming 
    command: |

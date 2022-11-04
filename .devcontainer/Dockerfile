@@ -21,30 +21,31 @@ RUN apt-get -y update \
 ARG SMING_REPO=https://github.com/SmingHub/Sming
 ARG SMING_BRANCH=develop
 ARG INSTALL_ARGS=all
-ARG CONTAINER_USER=developer
+ARG CONTAINER_USER=gitpod
 
 # Set user
-RUN mkdir -p /opt
-RUN adduser --disabled-password --gecos "" ${CONTAINER_USER}
-RUN echo "${CONTAINER_USER}     ALL=(ALL) NOPASSWD:ALL" >>  /etc/sudoers
-RUN chown ${CONTAINER_USER} /opt/
+RUN mkdir -p /opt && \
+    adduser --disabled-password --gecos "" ${CONTAINER_USER} && \
+    echo "${CONTAINER_USER}     ALL=(ALL) NOPASSWD:ALL" >>  /etc/sudoers && \
+    chown ${CONTAINER_USER} /opt/
 USER ${CONTAINER_USER}
 WORKDIR /home/${CONTAINER_USER}
 
 # Install development software
-RUN git clone $SMING_REPO -b $SMING_BRANCH /opt/sming
-RUN /opt/sming/Tools/install.sh $INSTALL_ARGS
-RUN sudo apt-get clean
+RUN git clone $SMING_REPO -b $SMING_BRANCH /opt/sming && \
+    /opt/sming/Tools/install.sh $INSTALL_ARGS && \
+    sudo apt-get clean && \
+    sudo rm -rf /var/lib/apt/lists/*
 
 # Download Tools
-RUN mkdir /home/${CONTAINER_USER}/tools
-RUN curl -L https://github.com/bjoernQ/esp-web-flash-server/releases/latest/download/web-flash-x86_64-unknown-linux-gnu.zip \
+RUN mkdir /home/${CONTAINER_USER}/tools && \
+    curl -L https://github.com/bjoernQ/esp-web-flash-server/releases/latest/download/web-flash-x86_64-unknown-linux-gnu.zip \
     -o /tmp/web-flash.zip \
     && unzip /tmp/web-flash.zip \
     -d /home/${CONTAINER_USER}/tools/ && \
     chmod u+x /home/${CONTAINER_USER}/tools/web-flash && \
-    rm /tmp/web-flash.zip
-RUN curl -L https://github.com/MabezDev/wokwi-server/releases/latest/download/wokwi-server-x86_64-unknown-linux-gnu.zip \
+    rm /tmp/web-flash.zip && \
+    curl -L https://github.com/MabezDev/wokwi-server/releases/latest/download/wokwi-server-x86_64-unknown-linux-gnu.zip \
     -o /tmp/wokwi-server.zip \
     && unzip /tmp/wokwi-server.zip \
     -d /home/${CONTAINER_USER}/tools/ && \
