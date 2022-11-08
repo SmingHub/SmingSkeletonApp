@@ -1,9 +1,8 @@
-image: 
-  file: .devcontainer/Dockerfile
-  context: .devcontainer
+image: attachix/sming:develop_gitpod_esp32
 tasks:
  - name: Setup environment variables for Sming 
    command: |
+     export SMING_ARCH=Esp32
      source /opt/sming/Tools/export.sh
 vscode:
   extensions:
