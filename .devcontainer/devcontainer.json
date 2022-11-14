@@ -20,7 +20,11 @@
     "json.schemas": []
   },
   "extensions": [
-    "rust-lang.rust-analyzer",
+    "ms-vscode.makefile-tools",
+    "ms-vscode.cmake-tools",
+    "ms-vscode.cpptools",
+    "ms-vscode.cpptools-extension-pack",
+    "ms-vscode.cpptools-themes",
     "tamasfe.even-better-toml",
     "serayuzgur.crates",
     "mutantdino.resourcemonitor",
